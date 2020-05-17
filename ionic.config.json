@@ -1,0 +1,7 @@
+{
+  "name": "mango-crud-17",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
