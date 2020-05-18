@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="mango">
+    <ion-title>Sign Up</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="center">
+    <app-logo></app-logo>
+
+    <h1>Create Account</h1>
+  </div>
+  <form [formGroup]="form" (submit)="onSubmit()">
+    <ion-item>
+      <ion-label position="floating">First Name</ion-label>
+      <ion-input type="text" formControlName="firstname" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Last Name</ion-label>
+      <ion-input type="text" formControlName="lastname" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input type="text" formControlName="username" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Password</ion-label>
+      <ion-input
+        type="password"
+        formControlName="password"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      Already you have an account &nbsp; <a routerLink="/login">Sign In</a>
+    </ion-item>
+    <ion-button
+      type="submit"
+      expand="block"
+      color="mango"
+      class="ion-margin-top"
+      [disabled]="form.invalid"
+    >
+      Register
+    </ion-button>
+  </form>
+</ion-content>
